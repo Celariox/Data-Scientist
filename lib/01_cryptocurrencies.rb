@@ -19,7 +19,7 @@ puts combo.min_by{|k, v| v.to_f}
 puts 
 
 puts "Le nombre de crypto contenant le mot coin : "
-puts combo.count {|k, v| k.include?"coin"}
+puts combo.count {|k| k.to_s.downcase.include?"coin"}
 puts
 
 puts "Les devises dont le cours est inférieur à 6000 : "
